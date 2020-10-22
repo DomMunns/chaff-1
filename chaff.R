@@ -23,3 +23,12 @@ anova <- aov(mass ~ sex, data = chaff2)
 summary(anova)
 
 #there is a sig diff in mass btw sexes
+
+#create a figure
+
+library(ggplot2)
+
+chaff2 %>% ggplot(aes(x = sex, y = mass)) +
+  geom_boxplot()
+
+
